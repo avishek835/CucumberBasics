@@ -24,7 +24,7 @@ Feature: Login Feature
 
   @Login
   Scenario Outline: In Order to Login Facebook
-    Given User navigates to Facebook website
+    Given User navigates to Crm website
     And user validates the title
     Then user provides "<username>" in username field
     And user provides "<password>" in password field

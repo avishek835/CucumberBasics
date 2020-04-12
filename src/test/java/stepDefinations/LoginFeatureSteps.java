@@ -1,6 +1,7 @@
 package stepDefinations;
 
-import org.openqa.selenium.WebDriver;
+import java.util.Properties;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -9,21 +10,28 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pageClass.AllPages;
+import utilPackage.CrmProPractiseUtil;
 
 public class LoginFeatureSteps extends AllBaseFile{
 	
 	
 	
-	AllPages ap;
 	
-	@Given("^User navigates to Facebook website$")
+	public LoginFeatureSteps() {
+	cpu=new CrmProPractiseUtil();
+	propX=cpu.getProp();
+	}
+	
+	@Given("^User navigates to Crm website$")
 	 public void  User_navigates_to_Facebook_website() throws Throwable
 	{
 		System.setProperty("webdriver.chrome.driver","E:\\SELENIUM\\Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
-		ap=PageFactory.initElements(driver, AllPages.class);//this should called after driver initialised
 		driver.manage().window().maximize();
-		driver.get("https://www.crmpro.com");
+		
+		ap=PageFactory.initElements(driver, AllPages.class);//this should called after driver initialised
+		
+		driver.get(propX.getProperty("URL"));
 		System.out.println("@Given--User navigates to Facebook website");
 	    
 	}

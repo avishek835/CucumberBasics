@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 
 public class HomePageSteps {
 	
-	@Given("^User navigates to CrmPro websites$")
+	@Given("^User navigates to Facebook websites$")
 	 public void  User_navigates_to_Facebook_websites() throws Throwable
 	{
 	 System.out.println("@Given--User navigates to Facebook websites");
