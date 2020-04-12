@@ -23,8 +23,8 @@ Feature: Website visit Feature
  I want to visit the website
  
   @tag1
-  Scenario: In Order to visit Facebook
-    Given User navigates to Facebook websites
+  Scenario: In Order to visit CRMPRO
+    Given User navigates to CrmPro websites
     And user validate the title
     
 
